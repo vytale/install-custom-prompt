@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 if [ ! -f ~/.cache/oh-my-posh/themes/custom-theme.omp.json ]; then
     curl -s https://ohmyposh.dev/install.sh | bash -s
