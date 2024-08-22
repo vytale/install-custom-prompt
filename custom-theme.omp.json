@@ -6,27 +6,27 @@
       "segments": [
         {
           "background": "#29315A",
-          "foreground": "#43CCEA",
-          "leading_diamond": "\ue0b6",
-          "properties": {
-            "style": "mixed"
-          },
-          "style": "diamond",
-          "template": "{{ .UserName }}{{ if .SSHSession }}\ueba9 {{ else }}<transparent> / </>{{ end }}{{ .HostName }}",
-          "trailing_diamond": "\ue0b4",
-          "type": "session"
-        },
-        {
-          "background": "#29315A",
           "foreground": "#3EC669",
           "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b4",
           "properties": {
             "style": "mixed"
           },
           "style": "diamond",
           "template": "\ue5ff {{ .Path }}",
-          "trailing_diamond": "\ue0b4",
           "type": "path"
+        },
+        {
+          "background": "#29315A",
+          "foreground": "#43CCEA",
+          "leading_diamond": " \ue0b6",
+          "trailing_diamond": "\ue0b4",
+          "properties": {
+            "style": "mixed"
+          },
+          "style": "diamond",
+          "template": "{{ .UserName }}{{ if .SSHSession }} \ueba9 {{ else }}<transparent> / </>{{ end }}{{ .HostName }}",
+          "type": "session"
         },
         {
           "background": "#29315A",
@@ -57,7 +57,7 @@
             "threshold": 0
           },
           "style": "diamond",
-          "template": "<#000000>\ue0b1 </>{{ .FormattedMs }}s ",
+          "template": "{{ .FormattedMs }}s ",
           "leading_diamond": " \ue0b6",
           "trailing_diamond": "\ue0b4",
           "type": "executiontime"
@@ -126,7 +126,7 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "#63f0d8",
+          "foreground": "#dd1e1e",
           "style": "plain",
           "template": "\u279c ",
           "type": "text"
