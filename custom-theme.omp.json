@@ -25,7 +25,7 @@
             "style": "mixed"
           },
           "style": "diamond",
-          "template": "{{ .UserName }}{{ if .SSHSession }} \ueba9 {{ else }}<transparent> / </>{{ end }}{{ .HostName }}",
+          "template": "{{ if .Root }}<#ff0000> {{ else }} <#43CCEA> {{ end }} {{ .UserName }}</>{{ if .SSHSession }} \ueba9 {{ else }}<transparent> / </>{{ end }}{{ .HostName }}",
           "type": "session"
         },
         {
@@ -50,6 +50,20 @@
           "type": "git"
         },
         {
+          "foreground": "#C94A16",
+          "style": "plain",
+          "leading_diamond": " \ue0b6",
+          "trailing_diamond": "\ue0b4",
+          "template": "fail",
+          "type": "status"
+        }
+      ],
+      "type": "prompt"
+    },
+     {
+      "alignment": "right",
+      "segments": [
+        {
           "background": "#29315A",
           "foreground": "#ffffff",
           "properties": {
@@ -63,19 +77,7 @@
           "type": "executiontime"
         },
         {
-          "foreground": "#C94A16",
-          "style": "plain",
-          "template": "x ",
-          "type": "status"
-        }
-      ],
-      "type": "prompt"
-    },
-     {
-      "alignment": "right",
-      "segments": [
-
-        {
+          "background": "#29315A",
           "foreground": "#5fb157",
           "properties": {
             "display_mode": "files",
@@ -84,39 +86,87 @@
             "npm_icon": "<#FE4A49>\ue71e npm</> ",
             "yarn_icon":"<#44FFD2>\uf487 yarn</> "
           },
-          "style": "plain",
+          "style": "diamond",
+          "leading_diamond": " \ue0b6",
+          "trailing_diamond": "\ue0b4",
+          "template": " {{ .Name}}",
+          "type": "project"
+        },
+        {
+          "type": "docker",
+          "style": "diamond",
+          "leading_diamond": " \ue0b6",
+          "trailing_diamond": "\ue0b4",
+          "background": "#29315A",
+          "foreground": "#5fb157",
+          "template": "  {{ .Context }} "
+        },
+        {
+          "background": "#29315A",
+          "foreground": "#5fb157",
+          "properties": {
+            "display_mode": "files",
+            "fetch_package_manager": true,
+            "fetch_version": true,
+            "npm_icon": "<#FE4A49>\ue71e npm</> ",
+            "yarn_icon":"<#44FFD2>\uf487 yarn</> "
+          },
+          "style": "diamond",
+          "leading_diamond": " \ue0b6",
+          "trailing_diamond": "\ue0b4",
           "template": "{{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}\ue718 {{ .Full }}",
           "type": "node"
         },
         {
+          "background": "#29315A",
           "foreground": "#4063D8",
           "properties": {
             "display_mode": "files",
             "fetch_version": true
           },
-          "style": "plain",
+          "style": "diamond",
+          "leading_diamond": " \ue0b6",
+          "trailing_diamond": "\ue0b4",
           "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
           "type": "crystal"
         },
         {
+          "background": "#29315A",
           "foreground": "#DE3F24",
           "properties": {
             "display_mode": "files",
             "fetch_version": true
           },
-          "style": "plain",
+          "style": "diamond",
+          "leading_diamond": " \ue0b6",
+          "trailing_diamond": "\ue0b4",
           "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
           "type": "ruby"
         },
         {
+          "background": "#29315A",
           "foreground": "#FED142",
           "properties": {
             "display_mode": "context",
             "fetch_virtual_env": false
           },
-          "style": "plain",
+          "style": "diamond",
+          "leading_diamond": " \ue0b6",
+          "trailing_diamond": "\ue0b4",
           "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
           "type": "python"
+        },
+        {
+          "background": "#29315A",
+          "foreground": "#da7a0d",
+          "properties": {
+            "display_mode": "context"
+          },
+          "style": "diamond",
+          "leading_diamond": " \ue0b6",
+          "trailing_diamond": "\ue0b4",
+          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "type": "java"
         }
       ],
       "type": "prompt"
