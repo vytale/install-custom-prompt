@@ -90,32 +90,6 @@
         },
         {
           "background": "#29315A",
-          "foreground": "#4063D8",
-          "properties": {
-            "display_mode": "files",
-            "fetch_version": true
-          },
-          "style": "diamond",
-          "leading_diamond": " \ue0b6",
-          "trailing_diamond": "\ue0b4",
-          "template": "{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
-          "type": "crystal"
-        },
-        {
-          "background": "#29315A",
-          "foreground": "#DE3F24",
-          "properties": {
-            "display_mode": "files",
-            "fetch_version": true
-          },
-          "style": "diamond",
-          "leading_diamond": " \ue0b6",
-          "trailing_diamond": "\ue0b4",
-          "template": "{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
-          "type": "ruby"
-        },
-        {
-          "background": "#29315A",
           "foreground": "#FED142",
           "properties": {
             "display_mode": "context",
@@ -124,7 +98,7 @@
           "style": "diamond",
           "leading_diamond": " \ue0b6",
           "trailing_diamond": "\ue0b4",
-          "template": "{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "template": "\ue73c {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
           "type": "python"
         },
         {
@@ -136,7 +110,7 @@
           "style": "diamond",
           "leading_diamond": " \ue0b6",
           "trailing_diamond": "\ue0b4",
-          "template": "{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "template": "\ue738 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
           "type": "java"
         },
         {
@@ -153,6 +127,7 @@
           "type": "executiontime"
         },
         {
+          "background": "#29315A",
           "foreground": "#94ffa2",
           "style": "diamond",
           "leading_diamond": " \ue0b6",
