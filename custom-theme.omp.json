@@ -132,7 +132,7 @@
           "style": "diamond",
           "leading_diamond": " \ue0b6",
           "trailing_diamond": "\ue0b4",
-          "template": " <#ffffff>\uefc5</> {{ round .PhysicalPercentUsed .Precision }}% ({{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1073741824.0) }}/{{ (div .PhysicalTotalMemory 1073741824.0) }}GB)",
+          "template": "<#ffffff>\uefc5 </>{{ round .PhysicalPercentUsed .Precision }}%",
           "type": "sysinfo"
         }
       ],
