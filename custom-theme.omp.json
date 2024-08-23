@@ -146,7 +146,7 @@
         {
           "foreground": "#dd1e1e",
           "style": "plain",
-          "template": "\\Uf048a ",
+          "template": "󰒊 ",
           "type": "text"
         }
       ],
