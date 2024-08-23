@@ -25,7 +25,7 @@
             "style": "mixed"
           },
           "style": "diamond",
-          "template": "{{ if .Root }}<#ff0000> {{ else }}<#43CCEA> {{ end }} {{ .UserName }}</>{{ if .SSHSession }} \ueba9 {{ else }}<transparent> / </>{{ end }}{{ .HostName }}",
+          "template": "{{ if .Root }}<#ff0000>{{ else }}<#43CCEA>{{ end }}{{ .UserName }}</>{{ if .SSHSession }} \ueba9 {{ else }}<transparent> / </>{{ end }}{{ .HostName }}",
           "type": "session"
         },
         {
