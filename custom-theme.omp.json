@@ -145,7 +145,7 @@
         {
           "foreground": "#dd1e1e",
           "style": "plain",
-          "template": "\u279c ",
+          "template": "\uf048a ",
           "type": "text"
         }
       ],
