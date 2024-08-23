@@ -64,19 +64,6 @@
       "alignment": "right",
       "segments": [
         {
-          "background": "#29315A",
-          "foreground": "#ffffff",
-          "properties": {
-            "style": "dallas",
-            "threshold": 0
-          },
-          "style": "diamond",
-          "template": "{{ .FormattedMs }}s",
-          "leading_diamond": " \ue0b6",
-          "trailing_diamond": "\ue0b4",
-          "type": "executiontime"
-        },
-        {
           "type": "docker",
           "style": "diamond",
           "leading_diamond": " \ue0b6",
@@ -151,6 +138,27 @@
           "trailing_diamond": "\ue0b4",
           "template": "{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
           "type": "java"
+        },
+        {
+          "background": "#29315A",
+          "foreground": "#94ffa2",
+          "properties": {
+            "style": "dallas",
+            "threshold": 0
+          },
+          "style": "diamond",
+          "leading_diamond": " \ue0b6",
+          "trailing_diamond": "\ue0b4",
+          "template": "<#ffffff>\uf017</> {{ .FormattedMs }}s",
+          "type": "executiontime"
+        },
+        {
+          "foreground": "#94ffa2",
+          "style": "diamond",
+          "leading_diamond": " \ue0b6",
+          "trailing_diamond": "\ue0b4",
+          "template": " <#ffffff>\uefc5</> {{ round .PhysicalPercentUsed .Precision }}% ({{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1073741824.0) }}/{{ (div .PhysicalTotalMemory 1073741824.0) }}GB)",
+          "type": "sysinfo"
         }
       ],
       "type": "prompt"
