@@ -25,7 +25,7 @@
             "style": "mixed"
           },
           "style": "diamond",
-          "template": "{{ if .Root }}<#ff0000> {{ else }} <#43CCEA> {{ end }} {{ .UserName }}</>{{ if .SSHSession }} \ueba9 {{ else }}<transparent> / </>{{ end }}{{ .HostName }}",
+          "template": "{{ if .Root }}<#ff0000> {{ else }}<#43CCEA> {{ end }} {{ .UserName }}</>{{ if .SSHSession }} \ueba9 {{ else }}<transparent> / </>{{ end }}{{ .HostName }}",
           "type": "session"
         },
         {
@@ -45,7 +45,7 @@
             "fetch_upstream_icon": true
           },
           "style": "diamond",
-          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
+          "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }}",
           "trailing_diamond": "\ue0b4",
           "type": "git"
         },
@@ -54,7 +54,7 @@
           "style": "plain",
           "leading_diamond": " \ue0b6",
           "trailing_diamond": "\ue0b4",
-          "template": "fail",
+          "template": "\uebfb",
           "type": "status"
         }
       ],
@@ -71,26 +71,10 @@
             "threshold": 0
           },
           "style": "diamond",
-          "template": "{{ .FormattedMs }}s ",
+          "template": "{{ .FormattedMs }}s",
           "leading_diamond": " \ue0b6",
           "trailing_diamond": "\ue0b4",
           "type": "executiontime"
-        },
-        {
-          "background": "#29315A",
-          "foreground": "#5fb157",
-          "properties": {
-            "display_mode": "files",
-            "fetch_package_manager": true,
-            "fetch_version": true,
-            "npm_icon": "<#FE4A49>\ue71e npm</> ",
-            "yarn_icon":"<#44FFD2>\uf487 yarn</> "
-          },
-          "style": "diamond",
-          "leading_diamond": " \ue0b6",
-          "trailing_diamond": "\ue0b4",
-          "template": " {{ .Name}}",
-          "type": "project"
         },
         {
           "type": "docker",
@@ -99,7 +83,7 @@
           "trailing_diamond": "\ue0b4",
           "background": "#29315A",
           "foreground": "#5fb157",
-          "template": "  {{ .Context }} "
+          "template": "\uf21f {{ .Context }}"
         },
         {
           "background": "#29315A",
@@ -127,7 +111,7 @@
           "style": "diamond",
           "leading_diamond": " \ue0b6",
           "trailing_diamond": "\ue0b4",
-          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "template": "{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
           "type": "crystal"
         },
         {
@@ -140,7 +124,7 @@
           "style": "diamond",
           "leading_diamond": " \ue0b6",
           "trailing_diamond": "\ue0b4",
-          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "template": "{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
           "type": "ruby"
         },
         {
@@ -153,7 +137,7 @@
           "style": "diamond",
           "leading_diamond": " \ue0b6",
           "trailing_diamond": "\ue0b4",
-          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "template": "{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
           "type": "python"
         },
         {
@@ -165,7 +149,7 @@
           "style": "diamond",
           "leading_diamond": " \ue0b6",
           "trailing_diamond": "\ue0b4",
-          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "template": "{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
           "type": "java"
         }
       ],
